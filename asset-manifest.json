@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/ShareTravel/static/css/main.e7720ab7.css",
+    "main.js": "/ShareTravel/static/js/main.eae0bfd2.js",
+    "index.html": "/ShareTravel/index.html",
+    "main.e7720ab7.css.map": "/ShareTravel/static/css/main.e7720ab7.css.map",
+    "main.eae0bfd2.js.map": "/ShareTravel/static/js/main.eae0bfd2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e7720ab7.css",
+    "static/js/main.eae0bfd2.js"
+  ]
+}
