@@ -78,9 +78,6 @@ export const displaySlice = createSlice({
   },
 });
 
-// select resource by id
-export const selectTravelById = (state: RootState, id: number) => state.travel.value.find((value) => value.id === id)
-
 export const { setVisibility, addLayer, updateOrAddLayer, deleteLayer } = displaySlice.actions;
 
 export const selectDisplay = (state: RootState) => state.display.value;

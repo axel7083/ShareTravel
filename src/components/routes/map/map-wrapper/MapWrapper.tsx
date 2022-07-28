@@ -8,7 +8,35 @@ import { selectDisplay } from '../../../../store/features/display/displaySlice'
 import Polylines from "../../../../utils/leaflet/Polylines";
 import IPolyline from "../../../../utils/interface/IPolyline";
 import {selectTravel} from '../../../../store/features/travel/travelSlice';
+import {ITravel} from '../../../../utils/interface/travel/ITravel';
 
+
+const extractDateFromTransport = (travel: ITravel) => {
+    let output = ""
+    travel.transports.map((value, index, array) => {
+        output = output + "from " + value.from + " to " + value.to + ((index < array.length - 1)?" or ":"")
+    })
+    return output
+}
+
+const estimate = (travel: ITravel) => {
+    let min = Number.MAX_SAFE_INTEGER;
+    for (let i = 0; i < travel.transports.length; i++) {
+        if(min > travel.transports[i].price)
+            min = travel.transports[i].price
+    }
+
+
+    let totalCost = (min !== Number.MAX_SAFE_INTEGER)?min:0
+
+    min = Number.MAX_SAFE_INTEGER;
+    for (let i = 0; i < travel.housing.length; i++) {
+        if(min > travel.housing[i].total)
+            min = travel.housing[i].total
+    }
+    totalCost += ((min !== Number.MAX_SAFE_INTEGER)?min:0)/3
+    return Math.floor(totalCost)
+}
 
 const MapWrapper = (
     {center, zoom} :
@@ -29,8 +57,9 @@ const MapWrapper = (
                 return {
                     pos: travel.pos,
                     color: "#ff0000",
-                    id: i,
+                    id: travel.id,
                     popupText: travel.town,
+                    description: extractDateFromTransport(travel) + "\n" + "Estimation: " + estimate(travel) + "€ (No food)"
                 }
             }
         );

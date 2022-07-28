@@ -7,4 +7,5 @@ export interface IMarker {
     id: number,
     popupText?: string;
     callback?: (id: number) => void;
+    description?: string;
 }

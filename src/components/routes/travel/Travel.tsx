@@ -3,9 +3,9 @@ import Col from 'react-bootstrap/Col';
 import React from "react";
 import {useParams} from 'react-router-dom';
 import {useAppSelector} from '../../../store/hooks';
-import {selectTravelById} from '../../../store/features/display/displaySlice';
 import {ITravel} from '../../../utils/interface/travel/ITravel';
 import {Container, Button, Card} from 'react-bootstrap';
+import {selectTravelById} from '../../../store/features/travel/travelSlice';
 
 const Travel = () => {
     const { id } = useParams();
@@ -41,8 +41,8 @@ const Travel = () => {
                             <Card.Body>
                                 <Card.Text>
                                     From {housing.from} to {housing.to}<br />
-                                    Price per night {housing.pricePerNight}<br />
-                                    Total price with cleaning {housing.total}<br />
+                                    Price per night {housing.pricePerNight}€<br />
+                                    Total price with cleaning {housing.total}€<br />
                                 </Card.Text>
                             </Card.Body>
                             <Button variant="primary" onClick={() => window.open(housing.url, '_blank')}>See in Airbnb</Button>
@@ -62,8 +62,7 @@ const Travel = () => {
                             <Card.Body>
                                 <Card.Text>
                                     From {transport.from} to {transport.to}<br />
-                                    Price {transport.price}<br />
-                                    image: {transport.image}<br />
+                                    Price {transport.price}€<br />
                                 </Card.Text>
                             </Card.Body>
                             <Button variant="primary" onClick={() => window.open(transport.link, '_blank')}>See in kayak</Button>

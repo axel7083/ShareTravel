@@ -4,6 +4,7 @@ import {IMarker} from "../interface/IMarker";
 import {Button, Container, Row, Col} from 'react-bootstrap';
 import {useNavigate} from 'react-router-dom';
 
+
 // This component is used to render all the Markers in the map
 const Markers = ({ markers }: {markers: IMarker[]}): JSX.Element => {
 
@@ -24,6 +25,8 @@ const Markers = ({ markers }: {markers: IMarker[]}): JSX.Element => {
                                     <Row>
                                         <Col>
                                             <h3>{marker.popupText}</h3>
+                                            {marker.description?<span style={{fontSize: "medium", display: "inline-block"}}>{marker.description}</span>:<></>}
+
                                         </Col>
                                     </Row>
                                     <Row>
