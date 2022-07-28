@@ -19,7 +19,13 @@ const initialState: TravelState = {
         total: 416,
         url: "https://www.airbnb.com/rooms/41885443?check_in=2022-08-05&check_out=2022-08-09&guests=1&adults=3&s=67&unique_share_id=5ef02857-70b8-4ca1-a475-81a8ad7b625b"
       }],
-      alternatives: {transports: []},
+      transports: [{
+        price: 119,
+        image: "/palerme-1.png",
+        from: "5/08/2022",
+        to :"8/08/2022",
+        link: "https://kay.ac/n_g-Az"
+      }],
       images: [
           "https://www.lasicile.fr/wp-content/uploads/2012/05/cathedrale-palerme-sicile.jpg",
           "https://itourisme.net/wp-content/uploads/2018/03/top-10-things-to-do-in-palermo.jpg",

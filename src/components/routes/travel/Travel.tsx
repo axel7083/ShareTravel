@@ -29,6 +29,7 @@ const Travel = () => {
                     )
                 })}
             </Row>
+            <br />
             <Row>
                 <h3>Housing</h3>
             </Row>
@@ -45,6 +46,26 @@ const Travel = () => {
                                 </Card.Text>
                             </Card.Body>
                             <Button variant="primary" onClick={() => window.open(housing.url, '_blank')}>See in Airbnb</Button>
+                        </Card>
+                    )
+                })}
+            </Row>
+            <br />
+            <Row>
+                <h3>Transport</h3>
+            </Row>
+            <Row>
+                {travel.transports.map((transport, i) => {
+                    return (
+                        <Card key={i}>
+                            <Card.Img variant="top" src={transport.image} />
+                            <Card.Body>
+                                <Card.Text>
+                                    From {transport.from} to {transport.to}<br />
+                                    Price {transport.price}<br />
+                                </Card.Text>
+                            </Card.Body>
+                            <Button variant="primary" onClick={() => window.open(transport.link, '_blank')}>See in kayak</Button>
                         </Card>
                     )
                 })}
