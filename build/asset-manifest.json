@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/static/css/main.e7720ab7.css",
-    "main.js": "/static/js/main.eae0bfd2.js",
-    "index.html": "/index.html",
-    "main.e7720ab7.css.map": "/static/css/main.e7720ab7.css.map",
-    "main.eae0bfd2.js.map": "/static/js/main.eae0bfd2.js.map"
+    "main.css": "/ShareTravel/static/css/main.e7720ab7.css",
+    "main.js": "/ShareTravel/static/js/main.35bc9e27.js",
+    "index.html": "/ShareTravel/index.html",
+    "main.e7720ab7.css.map": "/ShareTravel/static/css/main.e7720ab7.css.map",
+    "main.35bc9e27.js.map": "/ShareTravel/static/js/main.35bc9e27.js.map"
   },
   "entrypoints": [
     "static/css/main.e7720ab7.css",
-    "static/js/main.eae0bfd2.js"
+    "static/js/main.35bc9e27.js"
   ]
 }

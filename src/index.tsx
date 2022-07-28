@@ -6,7 +6,7 @@ import ReactDOM from 'react-dom/client';
 import { Provider } from 'react-redux';
 
 import {store} from "./store/store";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
 
 // The header is the navigation bar
 import Header from "./components/Header";

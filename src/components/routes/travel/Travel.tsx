@@ -63,6 +63,7 @@ const Travel = () => {
                                 <Card.Text>
                                     From {transport.from} to {transport.to}<br />
                                     Price {transport.price}<br />
+                                    image: {transport.image}<br />
                                 </Card.Text>
                             </Card.Body>
                             <Button variant="primary" onClick={() => window.open(transport.link, '_blank')}>See in kayak</Button>

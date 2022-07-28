@@ -21,7 +21,7 @@ const initialState: TravelState = {
       }],
       transports: [{
         price: 119,
-        image: "/palerme-1.png",
+        image: process.env.PUBLIC_URL + "/palerme-1.png",
         from: "5/08/2022",
         to :"8/08/2022",
         link: "https://kay.ac/n_g-Az"
